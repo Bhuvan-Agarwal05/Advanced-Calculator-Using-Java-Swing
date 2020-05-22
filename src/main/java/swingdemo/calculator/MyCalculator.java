@@ -1,5 +1,10 @@
 package swingdemo.calculator;
+
 import java.util.*;
+// These imports are to change the looks of button and frame
+//import javax.swing.UIManager;
+//import javax.swing.UIManager.LookAndFeelInfo;
+//import javax.swing.UnsupportedLookAndFeelException;
 
 public class MyCalculator extends javax.swing.JFrame {
     private String expr="";
@@ -13,6 +18,7 @@ public class MyCalculator extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
+        jFrame1 = new javax.swing.JFrame();
         jPanel1 = new javax.swing.JPanel();
         screen = new javax.swing.JTextField();
         btn1 = new javax.swing.JButton();
@@ -40,6 +46,17 @@ public class MyCalculator extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnOpenParen = new javax.swing.JButton();
         btnCloseParen = new javax.swing.JButton();
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
@@ -705,6 +722,10 @@ public class MyCalculator extends javax.swing.JFrame {
     } 
 
     public static void main(String args[]) {
+        
+        //For Round Buttons Effect
+        //UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.");
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MyCalculator().setVisible(true);
@@ -738,6 +759,7 @@ public class MyCalculator extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JRadioButton calOFF;
     private javax.swing.JRadioButton calON;
+    private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField screen;

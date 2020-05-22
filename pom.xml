@@ -10,4 +10,14 @@
         <maven.compiler.source>12</maven.compiler.source>
         <maven.compiler.target>12</maven.compiler.target>
     </properties>
+    
+    <!-- https://mvnrepository.com/artifact/com.jtattoo/JTattoo -->
+    <!-- <dependencies>
+<dependency>
+    <groupId>com.jtattoo</groupId>
+    <artifactId>JTattoo</artifactId>
+    <version>1.6.13</version>
+</dependency>
+    </dependencies>
+-->
 </project>
