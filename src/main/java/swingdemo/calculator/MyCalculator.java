@@ -50,6 +50,7 @@ public class MyCalculator extends javax.swing.JFrame {
         screen.setBackground(new java.awt.Color(255, 255, 255));
         screen.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         screen.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        screen.setToolTipText("Calculator Screen");
         screen.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 0, 0)));
         screen.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         screen.setMargin(new java.awt.Insets(10, 2, 2, 2));
@@ -147,6 +148,7 @@ public class MyCalculator extends javax.swing.JFrame {
 
         btnPoint.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         btnPoint.setText(".");
+        btnPoint.setToolTipText("Decimal Point");
         btnPoint.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPointActionPerformed(evt);
@@ -155,6 +157,7 @@ public class MyCalculator extends javax.swing.JFrame {
 
         btnClear.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         btnClear.setText("CLR");
+        btnClear.setToolTipText("Clear the screen");
         btnClear.setMargin(new java.awt.Insets(10, 14, 2, 14));
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,6 +167,7 @@ public class MyCalculator extends javax.swing.JFrame {
 
         btnAdd.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         btnAdd.setText("+");
+        btnAdd.setToolTipText("Addition");
         btnAdd.setMargin(new java.awt.Insets(10, 14, 2, 14));
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,6 +177,7 @@ public class MyCalculator extends javax.swing.JFrame {
 
         btnSub.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         btnSub.setText("-");
+        btnSub.setToolTipText("Subtraction");
         btnSub.setMargin(new java.awt.Insets(10, 14, 2, 14));
         btnSub.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,6 +187,7 @@ public class MyCalculator extends javax.swing.JFrame {
 
         btnAnswer.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         btnAnswer.setText("=");
+        btnAnswer.setToolTipText("Get Answer");
         btnAnswer.setMargin(new java.awt.Insets(10, 14, 2, 14));
         btnAnswer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,6 +197,7 @@ public class MyCalculator extends javax.swing.JFrame {
 
         btnMul.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         btnMul.setText("*");
+        btnMul.setToolTipText("Multiplication");
         btnMul.setMargin(new java.awt.Insets(10, 14, 2, 14));
         btnMul.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,6 +207,7 @@ public class MyCalculator extends javax.swing.JFrame {
 
         btnDiv.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         btnDiv.setText("/");
+        btnDiv.setToolTipText("Division");
         btnDiv.setMargin(new java.awt.Insets(7, 14, 2, 14));
         btnDiv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,6 +217,7 @@ public class MyCalculator extends javax.swing.JFrame {
 
         btnDelete.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         btnDelete.setText("Del");
+        btnDelete.setToolTipText("To Delete Last Inserted");
         btnDelete.setMargin(new java.awt.Insets(10, 14, 2, 14));
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,11 +228,17 @@ public class MyCalculator extends javax.swing.JFrame {
         btnMod.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         btnMod.setText("MOD");
         btnMod.setMargin(new java.awt.Insets(10, 14, 2, 14));
+        btnMod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModActionPerformed(evt);
+            }
+        });
 
         calON.setBackground(new java.awt.Color(204, 204, 204));
         buttonGroup1.add(calON);
         calON.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         calON.setText("ON ");
+        calON.setToolTipText("Switch ON");
         calON.setMargin(new java.awt.Insets(10, 5, 2, 2));
         calON.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -235,6 +250,7 @@ public class MyCalculator extends javax.swing.JFrame {
         buttonGroup1.add(calOFF);
         calOFF.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         calOFF.setText("OFF");
+        calOFF.setToolTipText("Switch OFF");
         calOFF.setMargin(new java.awt.Insets(10, 5, 1, 1));
         calOFF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -245,6 +261,7 @@ public class MyCalculator extends javax.swing.JFrame {
         answerLabel.setBackground(new java.awt.Color(255, 255, 255));
         answerLabel.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
         answerLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        answerLabel.setToolTipText("Answer Screen");
         answerLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(2, 2, 2)));
 
         jLabel2.setFont(new java.awt.Font("Calibri", 1, 18)); // NOI18N
@@ -252,6 +269,7 @@ public class MyCalculator extends javax.swing.JFrame {
 
         btnOpenParen.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         btnOpenParen.setText("(");
+        btnOpenParen.setToolTipText("Opening Parentheses");
         btnOpenParen.setMargin(new java.awt.Insets(10, 14, 2, 14));
         btnOpenParen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -261,6 +279,7 @@ public class MyCalculator extends javax.swing.JFrame {
 
         btnCloseParen.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         btnCloseParen.setText(")");
+        btnCloseParen.setToolTipText("Closing Parentheses");
         btnCloseParen.setMargin(new java.awt.Insets(10, 14, 2, 14));
         btnCloseParen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -292,23 +311,22 @@ public class MyCalculator extends javax.swing.JFrame {
                         .addComponent(btnOpenParen, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnCloseParen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btn5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(btn7, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
-                                .addComponent(btnPoint, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(btn8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btn0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btn7, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
+                            .addComponent(btnPoint, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -571,6 +589,10 @@ public class MyCalculator extends javax.swing.JFrame {
         expr = str + ")";
         screen.setText(expr);
     }//GEN-LAST:event_btnCloseParenActionPerformed
+
+    private void btnModActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModActionPerformed
+       
+    }//GEN-LAST:event_btnModActionPerformed
     
     
     private int evaluate(String expression) 
